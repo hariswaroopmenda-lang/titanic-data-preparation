@@ -1,0 +1,35 @@
+TITANIC DATA PREPARATION
+
+Aim
+Prepare Titanic passenger data for machine learning using eight functions.
+
+Method
+The script checks the data, cleans text and removes unnecessary columns.
+It creates a stratified 80/20 split, fills missing numbers with training medians,
+fills categories with training modes, encodes categories and scales numerical
+features. Preprocessing settings are learned from the training set only.
+
+Output
+The script saves X_train.csv, X_test.csv, y_train.csv, y_test.csv and a short
+run_summary.txt in the prepared_data folder. It does not train a prediction model.
+
+Run
+Keep titanic_pipeline.py and Titanic-Dataset.csv in the same folder.
+Using Python 3.12, run:
+
+    py -3.12 -m pip install pandas numpy seaborn "scikit-learn>=1.2"
+    py -3.12 titanic_pipeline.py --csv Titanic-Dataset.csv
+
+To use the Seaborn dataset specified in the assignment, run:
+
+    py -3.12 titanic_pipeline.py
+
+Submission
+The assignment asks for the single script: titanic_pipeline.py.
+The dataset and this guide are included for convenience.
+
+References
+Seaborn dataset loader:
+https://seaborn.pydata.org/generated/seaborn.load_dataset.html
+Scikit-learn guidance on preprocessing:
+https://scikit-learn.org/stable/common_pitfalls.html
